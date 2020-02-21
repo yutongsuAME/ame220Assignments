@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+<style>
+  img {
+    height: 300px;
+  }
+</style>
+
+<body style="background-color: #47C4ED; text-align: center; ">
+  <img /><br />
+  <button onclick="imgChange(1)"> 1 </button>
+  <button onclick="imgChange(2)"> 2 </button>
+  <button onclick="imgChange(3)"> 3 </button>
+</body>
+
+<script>
+  var imgs = [
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d9/Acer_diabolicum_9_%28medium_crop%29.jpg/320px-Acer_diabolicum_9_%28medium_crop%29.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Delos_Museum_Mosaik_Dionysos_09.jpg/240px-Delos_Museum_Mosaik_Dionysos_09.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg/800px-CSIRO_ScienceImage_3881_Five_Antennas_at_Narrabri_-_restoration1.jpg"
+  ];
+  window.onload = function () {
+    document.getElementsByTagName("img")[0].setAttribute("src", imgs[0]);
+  }
+  function imgChange(i) {
+    document.getElementsByTagName("img")[0].setAttribute("src", imgs[i - 1])
+  }
+</script>
+
+</html>
